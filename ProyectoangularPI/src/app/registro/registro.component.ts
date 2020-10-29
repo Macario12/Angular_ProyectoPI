@@ -14,31 +14,13 @@ export class RegistroComponent implements OnInit {
   public usuario: usuario;
   public status: string;
 
-  /*constructor(private _servicioUsuario: UsuarioService) { 
-    this.usuario = new usuario("",0,"","","","",);
-  }
-
-  ngOnInit(): void {
-    console.log(this.usuario); 
-  }
-
-  crearUsuario(){
-    this._servicioUsuario.crearUsuario(this.usuario).subscribe(
-      Response =>{
-        console.log(Response);
-        if(Response){
-          this.status = 'success';
-        }
-      }
-    )
-  }*/
-
   constructor(private _route: ActivatedRoute,
     private _router: Router,private servicio: UsuarioService,) { 
       this.usuario = new usuario("",null,"","","","",);
   }
 
   ngOnInit(): void {
+    this.camposVacios();
   }
 
   crearUsuario(){
@@ -47,8 +29,13 @@ export class RegistroComponent implements OnInit {
         console.log(Response);
         if(Response){
           this.status = 'success';
+          this._router.navigate(['/login']);
         }
       }
     )
+  }
+
+  camposVacios(){
+    
   }
 }
