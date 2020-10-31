@@ -1,1 +1,80 @@
-<p>principal works!</p>
+<html id="todo">
+<body id="Cuerpo">
+<h1>Pantalla Principal</h1>
+<div id="principal" class="principal" style="border: black 2px solid;">
+	<form method="post">
+    	<input type="radio" name="filto" id="curso" value="curso">
+        <label for="curso">Curso</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="filto" id="catedratico" value="catedratico">
+        <label for="catedratico">Catedratico</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="filto" id="nombreCuros" value="nombreCuros">
+        <label for="nombreCuros">Nombre de curso</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="filto" id="nombreCatedratico" value="nombreCatedratico">
+        <label for="nombreCatedratico">Nombre de catedratico</label><br><br>
+        <input type="text" name="pantalla" placeholder="Curso o catedratico" /><br><br>
+        <input id="btn" type="button" value="Continuar"><br><br><br>
+    </form>
+</div>
+
+<h1>Comentarios</h1>
+<h4 class="ComentariosExistentes">Comentarios Existentes</h4><br>
+<div id="ComentariosExistentes" class="ComentariosExistentes" style="border: black 2px solid;">
+    <p>Usuario:</p>
+    <input type="text" name="UsuarioCargado" placeholder="Usuario Cargado" /> 
+    <p>Fecha:</p> 
+    <input type="text" name="Fecha" placeholder="dd/mm/aaaa" >
+    <p>Curso:</p>
+    <input type="text" name="CursoCargado" placeholder="Curso Cargado" /><br>
+    <p>Catedratico:</p>
+    <input type="text" name="CatedraticoCargado" placeholder="Catedratico Cargado" /><br>
+    <p>Mensaje:</p>
+    <input type="text" name="MensajeCargado" placeholder="Mensaje Cargado" /><br><br>
+    Esta publicacion tiene <input type="text" name="ComentariosCargados" placeholder="n" width="5" /> comentarios<br><br>
+    <input id="btn" type="button" value="Ver Comentario">&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="btn" type="button" value="Ver Perfil">&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="btn" type="button" value="Dejar Comentario">
+</div>
+
+
+<h4 class="ComentarioNuevo">Nuevo Comentario</h4>
+<div id="ComentariosNuevos" class="ComentarioNuevo" style="border: black 2px solid;">     
+      <p>Tipo de publicacion</p>
+      <input type="radio" name="publicacion" id="curso" value="curso">
+      <label for="curso">Curso</label>&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="radio" name="publicacion" id="catedratico" value="catedratico">
+      <label for="catedratico">Catedratico</label>&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="radio" name="publicacion" id="CatedraticoCurso" value="CatedraticoCurso">
+      <label for="CatedraticoCurso">Catedratico de un curso</label>&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+      <input type="text" name="catedratico" placeholder="Catedratico" />&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" name="Curso" placeholder="Curso" /><br><br>
+      <textarea name="comentarios" rows="20" cols="90">Escribe aquí tus comentarios</textarea><br><br>
+      <input id="btn" type="button" value="Agregar"><br>
+</div>
+</body>
+</html>
+<style>
+    #btn{
+        background-color: coral;
+        text-align: center;
+    }
+
+    #ComentariosNuevos{
+        background-color: cornflowerblue;
+        text-align: center;
+    }
+
+    #Cuerpo{
+        text-align: center;
+        background-color: lightslategray;
+    }
+
+    #ComentariosExistentes{
+        background-color: darkcyan;
+    }
+
+    #principal{
+        background-color: darkorchid;
+    }
+
+    
+</style>
