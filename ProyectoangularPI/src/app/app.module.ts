@@ -11,6 +11,7 @@ import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { usuario } from './modelos/usuario.model';
 import { UsuarioService } from './services/usuario.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { UsuarioService } from './services/usuario.service';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [
     UsuarioService

@@ -20,7 +20,10 @@
       <input type="password" id="contraseña" name="contraseña" required [(ngModel)]="usuario.password">
       
     </fieldset>
-    
-    
+
     <button type="submit" (click)="crearUsuario()">Registrarse</button>
+    <br>
   </form>
+  <div class="caja">
+    <a routerLink="/login" class="link">¿Ya tienes cuenta?</a>
+  </div>
