@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute, Params, RouterLink} from "@angular/router";
 import { usuario } from '../modelos/usuario.model';
 import { UsuarioService } from '../services/usuario.service';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-login',
@@ -14,11 +15,16 @@ export class LoginComponent implements OnInit {
   public identity
   public status
   public error
-  constructor(private router: Router, private _userService: UsuarioService) {
+  constructor(private router: Router, private _userService: UsuarioService, private modal: NgbModal) {
     this.usuario = new usuario("","","","","","",);
    }
 
   ngOnInit(): void {
+    
+  }
+
+  openSM(contenido){
+    this.modal.open(contenido,{size:'sm'});
   }
 
   login(){
