@@ -11,10 +11,20 @@ import { UsuarioService } from '../services/usuario.service';
   providers: [UsuarioService]
 })
 export class EditarPerfilComponent implements OnInit {
+  
+  public usuario: usuario;
 
-  constructor() { }
+  constructor(usuario: usuario){
+    this.usuario = usuario;
+  }
 
   ngOnInit(): void {
+
+  }
+
+  actualizarUsuario(){
+    
+
   }
 
 }
