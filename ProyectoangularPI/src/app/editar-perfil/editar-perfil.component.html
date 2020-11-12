@@ -19,7 +19,10 @@
       <input type="password" id="contraseña" name="contraseña" placeholder="Nueva contraseña" required [(ngModel)]="usuario.password" >
       
     </fieldset>
-    
-    
-    <button type="submit" >Confirmar</button>
+
+    <button type="submit" (click)="actualizarUsuario()">Confirmar</button>
+
+    <div class="regresar">
+      <a routerLink="/principal" class="link">Regresar</a>  
+    </div>
   </form>
