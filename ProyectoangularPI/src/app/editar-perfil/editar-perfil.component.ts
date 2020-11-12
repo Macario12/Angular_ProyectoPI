@@ -13,18 +13,30 @@ import { UsuarioService } from '../services/usuario.service';
 export class EditarPerfilComponent implements OnInit {
   
   public usuario: usuario;
+  public status: string;
 
-  constructor(usuario: usuario){
-    this.usuario = usuario;
+  constructor(private _route: ActivatedRoute,
+    private _router: Router,private servicio: UsuarioService,) { 
+      this.usuario = new usuario("",null,"","","","",);
   }
+
 
   ngOnInit(): void {
 
   }
 
   actualizarUsuario(){
-    
-
+    this.servicio.actualizarUsuario(this.usuario).subscribe(
+      Response=>{
+        console.log(Response);
+        if(Response){
+          this.status = 'se actualizo xd'
+          this._router.navigate(['/principal']); 
+        }
+      }
+    )
   }
+
+
 
 }
